@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <!-- 현재 페이지 언어 설정(검색 엔진에 노출됨) -->
+
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- 반응형 웹을 위한 설정 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04_표 관련 태그</title>
+
+  <style>
+
+    #tb2 thead{
+      background-color: yellow;
+    }
+
+    #tb2 tbody{
+      background-color: skyblue;
+    }
+
+    #tb2 tfoot{
+      background-color: pink;
+    }
+
+    #tb3{
+      border-collapse: collapse;
+    }
+
+    #tb3 th{
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>표 관련 태그들</h1>  
+
+  <ol>
+    <li>
+      <h3>tabel(표) 태그</h3>
+      <pre>
+        - 웹 문서에서 자료(데이터)를
+          정리하기 위해 사용하는 태그
+
+        - table 태그는 행, 열을 작성하기 위한
+          판을 지칭하는 태그
+      </pre>
+    </li>
+    
+    <li>
+      <h3>tr(Table Row(행)) 태그</h3>
+      <pre>
+        - 테이블의 한 행을 나타내는 태그
+      </pre>
+    </li>
+
+    <li>
+      <h3>th(Table Data) 태그</h3>
+      <pre>
+        - 테이블 데이터를 작성할 수 있는 태그
+        - 각 행(tr)의 열(column) 역할을 함
+        == 액셀의 한 셀(한칸)
+      </pre>
+    </li>
+
+
+    <li>
+      <h3>th(Table Header) 태그</h3>
+      <pre>
+        - 테이블의 제목 
+          또는 내용을 강조할 떄
+          th 대신 사용하는 태그
+
+        - 굵은 글씨 + 가운데 정렬
+      </pre>
+    </li>
+
+    <li>
+      <h3>caption 태그</h3>
+      <pre>
+        - 테이블에 대한 설명을 작성하는 태그
+      </pre>
+    </li>
+    
+    <li>
+      <h3>thead 태그</h3>
+      <pre>
+        - 테이블 상단 영역(컬럼 제목 영역)
+      </pre>
+    </li>
+
+    <li>
+      <h3>thbody 태그</h3>
+      <pre>
+        - 테이블 중간 영역(컬럼 중간 영역)
+      </pre>
+    </li>
+
+    <li>
+      <h3>tfoot 태그</h3>
+      <pre>
+        - 테이블 하단 영역(컬럼 하단 영역)
+      </pre>
+    </li>
+
+  </ol>
+
+    
+
+  <hr>
+
+  <h3>테이블 연습 1</h3>
+
+  <table border="1">
+
+    <tr>
+      <th>번호</th>
+      <th>이름</th>
+      <th>나이</th>
+      <th>주소</th>
+    </tr>
+
+    <tr>
+      <th>1</th>
+      <th>홍길동</th>
+      <th>28</th>
+      <th>합정</th>
+    </tr>
+
+    <tr>
+      <th>2</th>
+      <th>홍길동</th>
+      <th>38</th>
+      <th>종로</th>
+    </tr>
+
+    <caption>학생 명단</caption>
+
+  </table>
+
+  <br>
+  <hr>
+
+  <h3>테이블 연습 2</h3>
+
+
+
+  <table border="1" id="tb2">
+
+    <caption>웹 브라우저의 종류</caption>
+    <thead>
+      <tr>
+        <th>브라우저</th>
+        <th>제조사</th>
+        <th>홈페이지</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>크롬</td>
+        <td>구글</td>
+        <td>
+          <a href="https://www.naver.com/">네이버 클릭</a>
+        </td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+        <td>엣지</ㅇ>
+        <td>MS</td>
+        <td>
+          <a href="https://www.microsoft.com/">이동하기</a>
+        </td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td>총</ㅇ>
+        <td>합:</td>
+        <td>2개</td>
+      </tr>
+    </tfoot>
+
+  </table>
+
+  <hr><hr><hr>
+
+  <h1>행 병합 (rowspan)속성 / 열 병합 (colspan)</h1>
+  <pre>
+    (병합 대신 "행/열 방향으로 몇 칸을 차지할 것이다" 라는 의미로 해석)
+    
+    rowspan : 행이 쌓인 방향(세로) 병합
+
+    colspan : 열이 나열된 방향(가로) 병합
+  </pre>
+
+  <table border="1" id="tb3">
+
+    <tr> <!-- 1행 -->
+      <th colspan="3">1</th>
+      <th>2</th>
+      <th rowspan="3">3</th>
+    </tr>
+
+    <tr> <!-- 2행 -->
+      <th rowspan="2">1</th>
+      <th colspan="3">2</th>
+    </tr>
+
+    <tr> <!-- 3행 -->
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+
+  </table>
+
+  <!-- 복잡한 구조의 테이블에서는 rowspan, colspan이 
+   적용되지 않는 경우도 있다. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
